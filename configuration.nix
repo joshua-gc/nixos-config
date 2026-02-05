@@ -5,8 +5,7 @@
 { config, pkgs, ... }:
 let
   precognition = pkgs.vimUtils.buildVimPlugin {
-    pname = "precognition.nvim";
-    version = "v1.1.0";
+    pname = "precognition.nvim";    version = "v1.1.0";
     src = pkgs.fetchFromGitHub {
       owner = "tris203";
       repo = "precognition.nvim";
@@ -35,7 +34,7 @@ in
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
