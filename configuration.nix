@@ -130,21 +130,9 @@ lua require("precognition").setup({})
   };
   
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
 	ripgrep
 	git
   ];
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name  = "John Doe";
-        email = "joshuagiuliacci@gmail.com";
-      };
-      init.defaultBranch = "main";
-    };
-  };
   # Some programs need SUID wrappers, can be configured further or are
   # started inuser sessions.
   # programs.mtr.enable = true;
